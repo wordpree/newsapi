@@ -1,0 +1,18 @@
+@import '../../sass/mixins.scss';
+
+.card-container {
+  position: relative;
+  @include grid(4,2%);
+  .card-body {
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+  }
+  .card-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+  }
+}
