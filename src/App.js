@@ -7,19 +7,26 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      articles:[]
+      articles:[],
+      loading:true
     }
   }
   componentDidMount(){
-    newsDataFetch().then(data=>this.setState({
-      articles:data
-    }));
+    setTimeout(()=>{
+      newsDataFetch().then(data=>this.setState({
+        articles:data,
+        loading:false
+        })
+      )
+    },1000);
+
+
   }
 
   render() {
     return (
       <div className="App">
-        <NewsLists newsfeed={this.state.articles} />
+        <NewsLists newsfeed={this.state.articles} loading={this.state.loading}/>
       </div>
     );
   }
