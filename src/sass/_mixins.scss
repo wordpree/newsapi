@@ -1,8 +1,28 @@
+@import './var.scss';
+
 @mixin grid($cols,$mgn) {
   margin-right: $mgn;
   margin-bottom: $mgn;
   width:((100%-(($cols - 1)*$mgn)) / $cols);
   &:nth-child(#{$cols}n) {
     margin-right: 0;
+  }
+}
+
+@mixin bp($size) {
+  @if $size == small {
+    @media only screen and #{$smpara} {
+      @content;
+    }
+  }
+  @else if $size == medium {
+    @media only screen and #{$mepara} {
+      @content;
+    }
+  }
+  @else if $size == large {
+    @media only screen and #{$lapara} {
+      @content;
+    }
   }
 }
