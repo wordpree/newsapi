@@ -1,5 +1,9 @@
-.container {
-  background-color: rgb(177,175,163);
+@import '../../sass/mixins.scss';
+
+.articles-container {
+  background-color: #979681;
+  @include grid(8,0%,5);
+
   .row {
     padding: 2em 1em;
     display: flex;
