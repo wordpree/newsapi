@@ -1,0 +1,7 @@
+@import '../../sass/mixins.scss';
+
+.sources-container {
+  @include grid(8,2%,3 );
+  padding: 0.85em;
+  background-color: #B1AF97;
+}

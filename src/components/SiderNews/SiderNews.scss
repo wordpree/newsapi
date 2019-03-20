@@ -1,0 +1,15 @@
+.news-container {
+  border-bottom: solid 2px #fff;
+  &:hover {
+    
+  }
+  &:last-child {
+    border-bottom:none;
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      color:#fff;
+    }
+  }
+}
