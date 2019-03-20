@@ -1,7 +1,7 @@
 .news-container {
   border-bottom: solid 2px #fff;
   &:hover {
-    
+    border-bottom-color: #282c34;
   }
   &:last-child {
     border-bottom:none;
