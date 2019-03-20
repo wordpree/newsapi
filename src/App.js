@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 import NewsLists from './components/NewsLists/NewsLists';
-import SideNewsLists from './components/SideNewsLists/SideNewsLists';
+import SiderNewsLists from './components/SiderNewsLists/SiderNewsLists';
 
 class App extends Component {
   constructor(props){
@@ -22,14 +22,17 @@ class App extends Component {
 
     return (
       <div className="App">
-        <nav>
+        <nav className='navbar'>
           <ul>
             <li data-state-value='top-headlines' onClick={this.handleOnClick}>Hit Top</li>
             <span></span>
             <li data-state-value='everything' onClick={this.handleOnClick}>Everything</li>
           </ul>
         </nav>
-        <NewsLists type={this.state.type} key={this.state.type} />
+        <div className='news-entry'>
+          <NewsLists type={this.state.type} key={this.state.type} />
+          <SiderNewsLists />
+        </div>
       </div>
     );
   }
