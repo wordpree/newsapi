@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding:0.5em;
+    background-color:#282c34;
+
+    li {
+      text-align: center;
+      padding-top:0.5em;
+      padding-bottom: 0.5em;
+      flex:1 0 auto;
+      list-style: none;
+      background-color:#343028;
+      color:#fff;
+      cursor: pointer;
+      transition: transform 0.5s;
+      &:active {
+        transform: translateY(4px);
+      }
+
+    }
+
+    span {
+      border-right: 2px solid #fff;
+    }
+  }
+}
