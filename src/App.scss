@@ -1,27 +1,29 @@
 .App {
   text-align: center;
   ul {
+    padding-left:0;
     display: flex;
     justify-content: space-around;
-    text-decoration: none;
     text-transform: uppercase;
-    padding:0.5em;
-    background-color:#282c34;
+    box-shadow: 0 5px #6B6B6B;
 
     li {
+      background-color:#282c34;
       text-align: center;
-      padding-top:0.5em;
-      padding-bottom: 0.5em;
+      padding:1.5em 0;
       flex:1 0 auto;
       list-style: none;
-      background-color:#343028;
-      color:#fff;
+      color:#D9DEDE;
       cursor: pointer;
       transition: transform 0.5s;
       &:active {
         transform: translateY(4px);
+        box-shadow: 0 1px #616161;
       }
-
+      &:hover {
+        background-color: #1E1F1F;
+        color: #fff;
+      }
     }
 
     span {
