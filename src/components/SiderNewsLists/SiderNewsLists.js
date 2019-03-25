@@ -1,5 +1,6 @@
 import React ,{Component} from 'react';
 import SiderNews from '../SiderNews/SiderNews';
+import { Svg } from '../Svg/Svg';
 import {newsDataFetch} from '../../util/NewsDataFetch';
 import './SiderNewsLists.scss';
 
@@ -24,7 +25,7 @@ class SiderNewsLists extends Component {
       );
   }
   render(){
-    let sources = this.state.sources.map((item,index)=><SiderNews sourceInfo={item} key= {item.url+index} />);
+    let sources = this.state.loading ? <Svg /> :this.state.sources.map((item,index)=><SiderNews sourceInfo={item} key= {item.url+index} />);
     return (
       <div className='sources-container'>
         <div className='line'>
