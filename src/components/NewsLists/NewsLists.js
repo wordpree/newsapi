@@ -1,5 +1,6 @@
 import React,{ Component } from 'react';
 import News from '../News/News';
+import Error from '../Error/Error';
 import { Svg } from '../Svg/Svg';
 import './NewsLists.scss';
 import { newsDataFetch } from '../../util/NewsDataFetch';
