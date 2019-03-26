@@ -1,31 +1,15 @@
 import React ,{Component} from 'react';
 import SiderNews from '../SiderNews/SiderNews';
+import WithNewsLists from '../WithNewsLists/WithNewsLists';
 import { Svg } from '../Svg/Svg';
-import {newsDataFetch} from '../../util/NewsDataFetch';
 import './SiderNewsLists.scss';
 
 class SiderNewsLists extends Component {
 
-  constructor(props){
-    super(props);
-    this.state ={
-      sources:[],
-      loading:true,
-      query:{
-        country:'au',
-        language:'en'
-      }
-    };
-  }
-  componentDidMount(){
-    newsDataFetch('sources' ).then(data=>this.setState({
-        sources:data,
-        loading:false
-        })
-      );
-  }
+
   render(){
-    let sources = this.state.loading ? <Svg /> :this.state.sources.map((item,index)=><SiderNews sourceInfo={item} key= {item.url+index} />);
+
+    let sources = this.props.loading ? <Svg /> :this.props.sources.map((item,index)=><SiderNews sourceInfo={item} key= {item.url+index} />);
     return (
       <div className='sources-container'>
         <div className='line'>
@@ -37,4 +21,4 @@ class SiderNewsLists extends Component {
 
 
 }
-export default SiderNewsLists;
+export default WithNewsLists(SiderNewsLists)('sources');
