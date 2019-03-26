@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.scss';
 import NewsLists from './components/NewsLists/NewsLists';
 import SiderNewsLists from './components/SiderNewsLists/SiderNewsLists';
-import Error from './components/Error/Error';
+import {SideNewsError,NewsError} from './components/Error/Error';
 
 class App extends Component {
   constructor(props){
@@ -31,12 +31,12 @@ class App extends Component {
           </ul>
         </nav>
         <div className='news-entry'>
-          <Error>
+          <NewsError>
             <NewsLists type={this.state.type} key={this.state.type} />
-          </Error>
-          <Error>
+          </NewsError>
+          <SideNewsError>
             <SiderNewsLists type='sources'/>
-          </Error>
+          </SideNewsError>
         </div>
       </div>
     );

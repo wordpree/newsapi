@@ -11,6 +11,7 @@ export let newsDataFetch = (searchType)=>{
                      }else if (resJson.sources) {
                        return resJson.sources;
                      }
-                   })
-                   .catch(err=>console.log(err));
+                   }).catch(err=>{
+                     console.log('Error caught in catch',err)
+                   })                 
   }
