@@ -1,7 +1,6 @@
 import React,{ Component } from 'react';
 import News from '../News/News';
 import WithNewsLists from '../WithNewsLists/WithNewsLists';
-import Error from '../Error/Error';
 import { Svg } from '../Svg/Svg';
 import './NewsLists.scss';
 

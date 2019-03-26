@@ -1,6 +1,4 @@
 import React,{ Component } from 'react';
-import News from '../News/News';
-import Error from '../Error/Error';
 import { newsDataFetch } from '../../util/NewsDataFetch';
 
 const WithNewsLists = WrappedComponent => dataSource =>{

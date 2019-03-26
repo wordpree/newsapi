@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.scss';
 import NewsLists from './components/NewsLists/NewsLists';
 import SiderNewsLists from './components/SiderNewsLists/SiderNewsLists';
+import Error from './components/Error/Error';
 
 class App extends Component {
   constructor(props){
@@ -30,8 +31,12 @@ class App extends Component {
           </ul>
         </nav>
         <div className='news-entry'>
-          <NewsLists type={this.state.type} key={this.state.type} />
-          <SiderNewsLists type='sources'/>
+          <Error>
+            <NewsLists type={this.state.type} key={this.state.type} />
+          </Error>
+          <Error>
+            <SiderNewsLists type='sources'/>
+          </Error>
         </div>
       </div>
     );
