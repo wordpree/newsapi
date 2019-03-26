@@ -15,7 +15,7 @@ const WithNewsLists = WrappedComponent => dataSource =>{
     }
 
     componentDidMount(){
-      newsDataFetch(dataSource).then(data=>this.setState({
+      newsDataFetch(this.props.type).then(data=>this.setState({
           [dataSource]:data,
           loading:false
           })

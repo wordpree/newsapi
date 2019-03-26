@@ -31,7 +31,7 @@ class App extends Component {
         </nav>
         <div className='news-entry'>
           <NewsLists type={this.state.type} key={this.state.type} />
-          <SiderNewsLists />
+          <SiderNewsLists type='sources'/>
         </div>
       </div>
     );
