@@ -1,4 +1,5 @@
 import React from 'react';
+import StarRate from '../StarRate/StarRate';
 import './News.scss';
 
 const News =({articleInfo})=>(
@@ -11,6 +12,7 @@ const News =({articleInfo})=>(
         </a>
       </div>
     </div>
+    <StarRate num={5}/>
   </div>
 );
 
