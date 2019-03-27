@@ -1,3 +1,4 @@
+@import './sass/mixins.scss';
 
 .App {
   text-align: center;
@@ -38,6 +39,12 @@
   .news-entry {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    
+    @include bp(medium){
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
   }
-
 }
