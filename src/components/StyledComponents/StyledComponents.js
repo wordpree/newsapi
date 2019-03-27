@@ -7,6 +7,7 @@ export const StarCss = styled.i`
   display: inline-block;
   width: 0;
   height: 0;
+  cursor:pointer;
 
   margin-left: .9em;
   margin-right: .9em;
@@ -16,7 +17,7 @@ export const StarCss = styled.i`
   border-bottom: ${ props=>props.starselected ? '.7em  solid #FC0':'.7em  solid #fff'};
   border-left:   .3em solid transparent;
 
-  font-size: 12px;
+  font-size: 8px;
 
   :before, :after {
     content: '';
