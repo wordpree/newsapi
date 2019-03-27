@@ -43,5 +43,12 @@ export const StarCss = styled.i`
 `;
 
 export const StarDiv = styled.div`
-  padding:0.4em 0 1em 0;
+  padding:0.2em 0 1em 0;
+`;
+
+export const StarRateP = styled.p`
+  font-size:0.75em;
+  @media only screen and (min-width:960px) {
+    font-size:1em;
+  }
 `;
