@@ -2,12 +2,17 @@
 
 .articles-container {
   background-color: #979681;
-  @include grid(8,0%,5);
+  @include grid(1,0%,1);
+  @include bp(medium){
+    @include grid(8,0%,5);
+  }
 
   .row {
-    padding: 2em 1em;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    @include bp(large){
+      padding: 2em 1em;
+    }
   }
 }
