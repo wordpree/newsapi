@@ -1,5 +1,5 @@
 import React,{ Component } from 'react';
-import { StarCss } from '../StyledComponents/StyledComponents';
+import { StarCss,StarDiv } from '../StyledComponents/StyledComponents';
 
 class StarRate extends Component {
   constructor(props){
@@ -23,10 +23,10 @@ class StarRate extends Component {
     });
 
     return (
-      <div className='star'>
+      <StarDiv>
         <p>{`News Rating: ${this.state.select} out of ${this.props.num}`}</p>
         {star}
-      </div>
+      </StarDiv>
     )
   }
 

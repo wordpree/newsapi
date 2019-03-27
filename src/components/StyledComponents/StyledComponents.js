@@ -41,3 +41,7 @@ export const StarCss = styled.i`
     transform: rotate(35deg);
   }
 `;
+
+export const StarDiv = styled.div`
+  padding:0.4em 0 1em 0;
+`;
