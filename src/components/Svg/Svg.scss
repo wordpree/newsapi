@@ -1,6 +1,12 @@
+@import '../../sass/mixins.scss';
+
 .lds-spinner {
   position: absolute;
-  left:31.25%;
+  left:50%;
   top:50%;
   transform: translate(-50%,-50%);
+
+  @include bp(medium) {
+    left:31.25%;
+  }
 }
