@@ -2,31 +2,33 @@ import React,{ Component } from 'react';
 import { StarCss,StarDiv,StarRateP } from '../StyledComponents/StyledComponents';
 
 class StarRate extends Component {
+
   constructor(props){
     super(props);
     this.state = {
-      select:1,
-      tempSelect:0
+      select:1
     };
+
+    this.selectclick = this.state.select;
   }
 
   handleClick(index){
-    this.setState({select:index})
+    this.setState({select:index});
+    this.selectclick = index;
   }
 
   handleMouseEnter(index){
-    this.setState({tempSelect:index})
+    this.setState({select:index});
   }
 
   handleMouseLeave(index){
-    this.setState({tempSelect:this.state.select})
+    this.setState({select:this.selectclick});
   }
 
   render(){
     let star = [...Array(this.props.num)].map((item,index) =>{
       return <StarCss
                 starselected ={ index < this.state.select }
-                startempselected ={ index < this.state.tempSelect }
                 key={ index }
                 onClick = { this.handleClick.bind(this,index+1) }
                 onMouseEnter = { this.handleMouseEnter.bind(this,index+1) }
