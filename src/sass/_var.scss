@@ -1,6 +1,8 @@
 $small:600px;
 $medium:960px;
-$large:1023px;
+$large:1024px;
+$elarge:1400px;
 $smpara:'(min-width:#{$small})' ;
 $mepara:'(min-width:#{$medium})';
 $lapara:'(min-width:#{$large})';
+$elapara:'(min-width:#{$elarge})';

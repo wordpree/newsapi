@@ -3,10 +3,7 @@
 @mixin grid($cols,$mgn,$n) {
   margin-right: $mgn;
   margin-bottom: $mgn;
-  width:($n*(100%-(($cols - 1)*$mgn)) / $cols);
-  &:nth-child(#{$cols}n) {
-    margin-right: 0;
-  }
+  width:($n*(100%-($cols*$mgn)) / $cols);
 }
 
 @mixin bp($size) {
@@ -22,6 +19,11 @@
   }
   @else if $size == large {
     @media only screen and #{$lapara} {
+      @content;
+    }
+  }
+  @else if $size == elarge {
+    @media only screen and #{$elapara} {
       @content;
     }
   }
