@@ -92,6 +92,13 @@
     } //card-image
   } //card-container
 
-  @include bp(large)  { @include grid(2,2%,1);&:nth-child(2n){margin-right: 0}}
-  @include bp(elarge)  { @include grid(3,1%,1);&:nth-child(3n){margin-right: 0}}
+  @include bp(large)  {
+    @include grid(2,2%,1);
+    &:nth-child(2n){margin-right: 0}
+  }
+  @include bp(elarge)  {
+    @include grid(3,1%,1);
+    &:nth-child(2n){margin-right: 1%}
+    &:nth-child(3n){margin-right: 0}
+  }
 } //card-entry

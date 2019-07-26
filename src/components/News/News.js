@@ -14,7 +14,7 @@ const News =({articleInfo})=>(
           </div>
         </div>
       </div>
-      <StarRate num={5}/>
+      <StarRate num={5} rate={0} />
   </div>
 );
 

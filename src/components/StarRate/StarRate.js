@@ -6,7 +6,7 @@ class StarRate extends Component {
   constructor(props){
     super(props);
     this.state = {
-      select:1
+      select:props.rate
     };
 
     this.selectclick = this.state.select;
@@ -21,18 +21,18 @@ class StarRate extends Component {
     this.setState({select:index});
   }
 
-  handleMouseLeave(index){
+  handleMouseLeave(){
     this.setState({select:this.selectclick});
   }
 
   render(){
     let star = [...Array(this.props.num)].map((item,index) =>{
       return <StarCss
-                starselected ={ index < this.state.select }
-                key={ index }
-                onClick = { this.handleClick.bind(this,index+1) }
+                starselected = { index < this.state.select }
+                key          = { index }
+                onClick      = { this.handleClick.bind(this,index+1) }
                 onMouseEnter = { this.handleMouseEnter.bind(this,index+1) }
-                onMouseLeave = { this.handleMouseLeave.bind(this,index+1) }
+                onMouseLeave = { this.handleMouseLeave.bind(this) }
              />
     });
 
