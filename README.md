@@ -5,3 +5,6 @@ In the project directory, you can run:
 
 ### `npm install`
 Install every dependencies and modules
+
+## visit this app
+You can easily open this site via [newsapi](https://jun-newsapi.netlify.com/)
